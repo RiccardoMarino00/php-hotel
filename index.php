@@ -50,23 +50,77 @@
         $text = "-Nome: $name -Descrizione: $description  -Parcheggio: $parking  -Voto: $vote  -Distanza dal centro: $center_distance";
         // var_dump($hotel);
         ?>
-          <p> <?php echo $text ?></p>
-        <?php
+          <table class="table table-primary">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Parcheggio</th>
+                <th scope="col">Voto</th>
+                <th scope="col">Distanza dal centro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row"> <?php echo $name; ?></td>
+                <td> <?php echo $description; ?> </td>
+                <td> <?php echo $parking; ?> </td>
+                <td> <?php echo $vote; ?> </td>
+                <td> <?php echo $center_distance; ?> Km </td>
+              </tr>
+            </tbody>
+        </table>
+    <?php
     }
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+    <!-- <table class="table table-primary">
+       <thead>
+         <tr>
+           <th scope="col">Nome</th>
+           <th scope="col">Descrizione</th>
+           <th scope="col">Parcheggio</th>
+           <th scope="col">Voto</th>
+           <th scope="col">Distanza dal centro</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <th scope="row">1</th>
+           <td>Mark</td>
+           <td>Otto</td>
+           <td>@mdo</td>
+         </tr>
+         <tr>
+           <th scope="row">2</th>
+           <td>Jacob</td>
+           <td>Thornton</td>
+           <td>@fat</td>
+         </tr>
+         <tr>
+           <th scope="row">3</th>
+           <td colspan="2">Larry the Bird</td>
+           <td>@twitter</td>
+         </tr>
+       </tbody>
+    </table> -->
     
     
  
     
 </body>
 </html>
+
+
+  
