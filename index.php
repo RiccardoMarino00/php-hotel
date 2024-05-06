@@ -39,18 +39,8 @@
         ],
 
     ];
-
-    for($i = 0; $i < count($hotels); $i++){
-        $hotel = $hotels[$i];
-        $name = $hotel['name'];
-        $description = $hotel['description'];
-        $parking = $hotel['parking'];
-        $vote = $hotel['vote'];
-        $center_distance = $hotel['distance_to_center'];
-        $text = "-Nome: $name -Descrizione: $description  -Parcheggio: $parking  -Voto: $vote  -Distanza dal centro: $center_distance";
-        // var_dump($hotel);
-        ?>
-          <table class="table table-primary">
+    ?>
+        <table class="table table-primary">
             <thead>
               <tr>
                 <th scope="col">Nome</th>
@@ -60,18 +50,31 @@
                 <th scope="col">Distanza dal centro</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td scope="row"> <?php echo $name; ?></td>
-                <td> <?php echo $description; ?> </td>
-                <td> <?php echo $parking; ?> </td>
-                <td> <?php echo $vote; ?> </td>
-                <td> <?php echo $center_distance; ?> Km </td>
-              </tr>
-            </tbody>
+            <?php
+             for($i = 0; $i < count($hotels); $i++){
+                $hotel = $hotels[$i];
+                $name = $hotel['name'];
+                $description = $hotel['description'];
+                $parking = $hotel['parking'];
+                $vote = $hotel['vote'];
+                $center_distance = $hotel['distance_to_center'];
+                $text = "-Nome: $name -Descrizione: $description  -Parcheggio: $parking  -Voto: $vote  -Distanza dal centro: $center_distance";
+                // var_dump($hotel);
+            ?>   
+               <tbody>
+                  <tr>
+                   <td scope="row"> <?php echo $name; ?></td>
+                   <td> <?php echo $description; ?> </td>
+                   <td> <?php echo $parking; ?> </td>
+                   <td> <?php echo $vote; ?> </td>
+                   <td> <?php echo $center_distance; ?> Km </td>
+                  </tr>
+                </tbody>
+            <?php
+             }
+            ?>
         </table>
     <?php
-    }
 
 
 ?>
